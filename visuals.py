@@ -132,15 +132,12 @@ def fav_countries(df):
 
 def draw_log_timeline(df):
     colors = ['#FF8000', '#00E054', '#40BCF4', "#272F36"]
-    # Convert 'log_date' to datetime and extract the year-month period
     df['log_date'] = pd.to_datetime(df['log_date'])
     df['year_month'] = df['log_date'].dt.to_period('M').astype(str)
 
-    # Group by year-month and count the logs
     log_counts = df.groupby(
         ['year_month']).size().reset_index(name='counts')
 
-    # Create the bar chart using go.Bar
     fig = go.Figure(data=[
         go.Bar(
             x=log_counts['year_month'],
@@ -150,7 +147,6 @@ def draw_log_timeline(df):
         )
     ])
 
-    # Update the layout to customize appearance and disable the legend
     fig.update_layout(
         title="Your Film Logs Over Time",
         xaxis_title="",
@@ -158,8 +154,12 @@ def draw_log_timeline(df):
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
         font=dict(color='black'),
-        showlegend=False,  # Ensure the legend is disabled
-        xaxis_tickangle=-45
+        showlegend=False,
+        xaxis_tickangle=-45,
+        clickmode='none',
+        hovermode=False,
+        dragmode=False,
+
     )
 
     return fig

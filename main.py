@@ -133,7 +133,6 @@ async def fetch_data(client: httpx.AsyncClient, username: str, page: int, execut
     ]
     details_list = await asyncio.gather(*film_details_tasks, return_exceptions=True)
 
-    # Attach the details to the DataFrame
     details_df = pd.DataFrame(details_list)
     combined_df = pd.concat([df, details_df], axis=1)
     return combined_df
@@ -153,7 +152,6 @@ def run_app():
 
     st.title("Letterboard : Your Letterboxd Diary Analysis",)
 
-    # add a description
     st.markdown(
         """
         Welcome to Letterboard! This app allows you to analyze your Letterboxd diary and discover interesting insights about your film-watching habits.
@@ -212,10 +210,8 @@ def run_app():
                             f"Timeout error. Please try again or check your internet connection.")
                         return
                 with tab_level2:
-                    # show dataframe
                     fig = radar_plot(df)
 
-                    # Plot tile :
                     title = "Your Favorite Studios"
                     subtitle = """
                     
@@ -225,8 +221,6 @@ def run_app():
 
                     Inspired by the work of [Tobias Stadler](https://tobias-stalder.netlify.app/dataviz/) & [Tomás Capretto](https://tomicapretto.com/)
                     """
-
-                    # Add title and subtitle to the plot
 
                     st.markdown(f"""
                     # {title}
