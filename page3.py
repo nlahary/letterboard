@@ -81,7 +81,7 @@ def plot_sankey(df):
     # Créer le diagramme de Sankey
     fig = go.Figure(data=[go.Sankey(
         node=dict(
-            pad=20,  # Augmenter l'espace entre les nœuds
+            pad=200,  # Augmenter l'espace entre les nœuds
             thickness=50,  # Augmenter l'épaisseur des nœuds
             line=dict(color='black', width=0.5),
             label=list(countries) + list(languages),
@@ -98,7 +98,7 @@ def plot_sankey(df):
     fig.update_layout(
         font_size=12,
         width=1200,
-        height=800
+        height=1200
     )
 
     return fig

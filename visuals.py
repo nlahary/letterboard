@@ -14,6 +14,13 @@ from matplotlib.lines import Line2D
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 from textwrap import wrap
 
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.colors import LinearSegmentedColormap, Normalize, hex2color
+from textwrap import wrap
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
+
 
 def draw_top3(df):
 
@@ -30,7 +37,7 @@ def draw_top3(df):
     colors = ['#FF8000', '#00E054', '#40BCF4']
 
     fig, ax = plt.subplots()
-    fig.patch.set_facecolor('none')
+    fig.patch.set_facecolor('#0E1117')
     ax.patch.set_facecolor('none')
 
     circles = [
@@ -61,7 +68,7 @@ def draw_top3(df):
 
     ax.set_aspect('equal')
 
-    plt.xlim(0, 3.5)
+    plt.xlim(0.25, 3.5)
     plt.ylim(0, 2)
     plt.axis('off')
 
@@ -153,17 +160,17 @@ def draw_log_timeline(df):
         plot_bgcolor='rgba(0,0,0,0)',
         font=dict(color='black'),
         xaxis_tickangle=-45,
-
-
+        height=600,
+        # width=900,
     )
 
     fig.update_traces(
-        hoverinfo='none',  # Désactiver l'info-bulle
+        hoverinfo='none',  # Disable hoverinfo
         selector=dict(type='bar')
     )
 
     fig.update_layout(
-        # Supprimer des boutons spécifiques de la barre d'outils
+        # Remove specific buttons from the toolbar
         xaxis=dict(fixedrange=True),
         yaxis=dict(fixedrange=True),
         modebar_remove=['zoom', 'pan', 'select',
@@ -235,7 +242,19 @@ def draw_rating_hist(df):
             showline=False,
             showgrid=False,
             showticklabels=True,
-            ticks='outside'
+            ticks='outside',
+            tickmode='array',
+            tickvals=[0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5],
+            ticktext=["0.5", "1", "1.5", "2",
+                      "2.5", "3", "3.5", "4", "4.5", "5"],
+            tickfont=dict(
+                family="Arial",
+                size=14,
+                color="white"
+            ),
+            tickangle=0,
+            automargin=True,
+
         ),
         yaxis=dict(
             showline=False,
@@ -337,7 +356,6 @@ def fav_studios(df):
 
 
 def radar_plot(df):
-
     studios = df['studio'].value_counts().nlargest(10)
     studio_ratings = df.groupby('studio')['rating'].mean().loc[studios.index]
     studio_counts = df['studio'].value_counts().loc[studios.index]
@@ -349,15 +367,14 @@ def radar_plot(df):
 
     MOVIES_N = df_studios['counts'].values
 
-    COLORS = ["#6C5B7B", "#C06C84", "#F67280", "#F8B195"]
-    COLORS = ['#FF8000', '#00E054', '#40BCF4', "#272F36"]
-    cmap = mpl.colors.LinearSegmentedColormap.from_list(
-        "my color", COLORS, N=256)
+    # Create a colormap for the number of movies
+    cmap = LinearSegmentedColormap.from_list(
+        'custom', [hex2color('#FF8000'), hex2color('#00E054')])
+
     norm = mpl.colors.Normalize(vmin=MOVIES_N.min(), vmax=MOVIES_N.max())
     COLORS = cmap(norm(MOVIES_N))
 
-    # Ajuster la largeur des barres pour éviter le chevauchement
-    # Facteur 0.8 pour réduire le chevauchement
+    # Adjust the width of the bars to avoid overlap
     bar_width = 2 * np.pi / len(df_studios) * 0.8
 
     ANGLES = np.linspace(0, 2 * np.pi, len(df_studios),
@@ -367,22 +384,28 @@ def radar_plot(df):
     AVG_RATINGS = df_studios['avg_rating'].tolist()
     fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(polar=True))
 
-    fig.patch.set_facecolor('none')
+    fig.patch.set_facecolor('#0E1117')
     ax.patch.set_facecolor('none')
 
     ax.set_theta_offset(1/2*np.pi / 2)
     ax.set_ylim(0, 5)
 
-    # Colorier les grilles radiales en blanc
+    # Color radial grids in white
     ax.grid(color='white')
 
-    # Utiliser la largeur de barre dans la fonction ax.bar
-    ax.bar(ANGLES, RATINGS, color=COLORS, linewidth=0, width=bar_width)
+    # Use the bar width in the ax.bar function
+    bars = ax.bar(ANGLES, RATINGS, color=COLORS, linewidth=0, width=bar_width)
     ax.vlines(ANGLES, 0, 5, colors='white', ls=(
         0, (4, 4)), zorder=11, alpha=0.5)
     ax.scatter(ANGLES, AVG_RATINGS, color='white', s=100, zorder=10)
 
-    # Colorier le dernier cercle en blanc
+    # Annotate bars with the number of movies
+    for bar, count in zip(bars, MOVIES_N):
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width() / 2, height * 2/3, str(count),
+                ha='center', va='center', color='black', fontsize=12,)
+
+    # Hide the last circle
     ax.spines['polar'].set_visible(False)
 
     STUDIOS = ["\n".join(wrap(studio, 10, break_long_words=False))
@@ -391,7 +414,7 @@ def radar_plot(df):
     ax.set_xticks(ANGLES)
     ax.set_xticklabels(STUDIOS, fontsize=10, fontweight='bold', color='white')
 
-    # Assurer que les grilles radiales sont colorées en blanc et visibles
+    # Ensure radial grids are white and visible
     ax.yaxis.grid(True, color='white', linestyle='-', linewidth=1)
     ax.xaxis.grid(False)
 
@@ -404,7 +427,7 @@ def radar_plot(df):
 
     plt.setp(ax.get_yticklabels(), color='white')
 
-    # Color gradient legend to represent the number of movies : at the bottom of the radar plot, centered
+    # Color gradient legend to represent the number of movies
     gradient = np.linspace(0, 1, 256).reshape(1, -1)
     gradient = np.vstack((gradient, gradient))
 
@@ -419,9 +442,9 @@ def radar_plot(df):
 
     min_count = MOVIES_N.min()
     max_count = MOVIES_N.max()
-    mid_count = (min_count + max_count) // 2  # valeur intermédiaire
+    mid_count = (min_count + max_count) // 2
 
-    # Position des labels
+    # Position labels
     ax_inset.text(0, 1.5, str(min_count), color='white',
                   fontsize=13, ha='center', va='center', transform=ax_inset.transAxes)
     ax_inset.text(0.5, 1.5, str(mid_count), color='white', fontsize=13,
@@ -462,7 +485,7 @@ def draw_radar_decades(df):
             f'{max_movies_n}', color='#f4e60b',
             fontsize=10, ha='center')
 
-    fig.patch.set_facecolor('none')
+    fig.patch.set_facecolor('#0E1117')
     ax.patch.set_facecolor('none')
 
     ax.set_ylim(0, max(MOVIES_N) + 15)
@@ -491,7 +514,7 @@ def remove_plotly_menus(fig):
         xaxis=dict(fixedrange=True),
         yaxis=dict(fixedrange=True),
         modebar_remove=['zoom', 'pan', 'select', 'lasso', 'resetScale2d',
-                        'resetViews', 'toImage', 'toggleSpikelines', 'autoScale2d'],
+                        'resetViews', 'toggleSpikelines', 'autoScale2d'],
 
         clickmode='none',
         hovermode=False,

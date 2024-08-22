@@ -247,7 +247,10 @@ def run_app():
 
                     title = "Does the country of the movies always make movies of the same language?"
                     subtitle = """
-                    The Sankey diagram below shows the distribution of the languages of the movies you have watched by country.
+                    The Sankey diagram below shows the distribution of the languages spoken in the movies you have watched 
+                    by the country of origin of the movies. 
+                    The color of the links represents the language spoken in the movie.
+                    The width of the links represents the number of movies using that language.
                     """
 
                     st.markdown(f"""
