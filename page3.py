@@ -27,14 +27,28 @@ def plot_sankey(df):
         language: color for language, color in zip(
             languages,
             [
-                'rgba(0, 0, 255, 1)',  # blue
-                'rgba(0, 128, 0, 1)',  # green
-                'rgba(255, 0, 0, 1)',  # red
+                'rgba(0, 128, 0, 1)',    # green
+                'rgba(255, 0, 0, 1)',    # red
                 'rgba(255, 165, 0, 1)',  # orange
                 'rgba(128, 0, 128, 1)',  # purple
                 'rgba(0, 255, 255, 1)',  # cyan
                 'rgba(255, 0, 255, 1)',  # magenta
-                'rgba(255, 255, 0, 1)'   # yellow
+                'rgba(255, 255, 0, 1)',  # yellow
+                'rgba(128, 128, 128, 1)',  # gray
+                'rgba(0, 100, 0, 1)',    # dark green
+                'rgba(255, 20, 147, 1)',  # deep pink
+                'rgba(75, 0, 130, 1)',   # indigo
+                'rgba(255, 69, 0, 1)',   # orange red
+                'rgba(139, 0, 139, 1)',  # dark magenta
+                'rgba(255, 105, 180, 1)',  # hot pink
+                'rgba(0, 255, 127, 1)',  # spring green
+                'rgba(255, 140, 0, 1)',  # dark orange
+                'rgba(85, 107, 47, 1)',  # dark olive green
+                'rgba(255, 182, 193, 1)',  # light pink
+                'rgba(46, 139, 87, 1)',  # sea green
+                'rgba(255, 215, 0, 1)',  # gold
+                'rgba(0, 206, 209, 1)',  # dark turquoise
+                'rgba(147, 112, 219, 1)'  # medium purple
             ]
         )
     }
