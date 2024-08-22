@@ -122,12 +122,10 @@ def fav_countries(df):
         margin=dict(t=50, l=100, r=25, b=50),
         height=800,  # Increase the height of the figure
         width=1200,  # Increase the width of the figure
-        clickmode='none',
-        hovermode=False,
-        dragmode=False
+
     )
 
-    return fig
+    return remove_plotly_menus(fig)
 
 
 def draw_log_timeline(df):
@@ -154,15 +152,28 @@ def draw_log_timeline(df):
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
         font=dict(color='black'),
-        showlegend=False,
         xaxis_tickangle=-45,
-        clickmode='none',
-        hovermode=False,
-        dragmode=False,
+
 
     )
 
-    return fig
+    fig.update_traces(
+        hoverinfo='none',  # Désactiver l'info-bulle
+        selector=dict(type='bar')
+    )
+
+    fig.update_layout(
+        # Supprimer des boutons spécifiques de la barre d'outils
+        xaxis=dict(fixedrange=True),
+        yaxis=dict(fixedrange=True),
+        modebar_remove=['zoom', 'pan', 'select',
+                        'lasso', 'resetScale2d', 'resetViews'],
+        clickmode='none',
+        hovermode=False,
+        dragmode=False,
+    )
+
+    return remove_plotly_menus(fig)
 
 
 def fav_genres(df):
@@ -183,9 +194,6 @@ def fav_genres(df):
 
     # Update the layout to customize appearance and disable the legend
     fig.update_layout(
-        clickmode='none',
-        hovermode=False,
-        dragmode=False,
         margin=dict(t=50, l=25, r=25, b=25),
         title_font_size=20,
         showlegend=False,  # Ensure the legend is disabled
@@ -196,7 +204,7 @@ def fav_genres(df):
         font=dict(color='black')        # Font color for labels
     )
 
-    return fig
+    return remove_plotly_menus(fig)
 
 
 def draw_rating_hist(df):
@@ -243,7 +251,7 @@ def draw_rating_hist(df):
         title='Distribution of Film Ratings',
         title_font_size=20
     )
-    return fig
+    return remove_plotly_menus(fig)
 
 
 def fav_actors(df):
@@ -305,7 +313,6 @@ def fav_studios(df):
 
 
             color='black'),
-        showlegend=False
     ))
 
     # Update layout for better appearance
@@ -324,12 +331,9 @@ def fav_studios(df):
             # Correctly specified as an integer
             title_font=dict(size=13),
         ),
-        clickmode='none',
-        hovermode=False,
-        dragmode=False
     )
 
-    return fig
+    return remove_plotly_menus(fig)
 
 
 def radar_plot(df):
@@ -478,3 +482,19 @@ def draw_radar_decades(df):
         tick.set_pad(15)
 
     return fig
+
+
+def remove_plotly_menus(fig):
+
+    return fig.update_layout(
+        # Supprimer des boutons spécifiques de la barre d'outils
+        xaxis=dict(fixedrange=True),
+        yaxis=dict(fixedrange=True),
+        modebar_remove=['zoom', 'pan', 'select', 'lasso', 'resetScale2d',
+                        'resetViews', 'toImage', 'toggleSpikelines', 'autoScale2d'],
+
+        clickmode='none',
+        hovermode=False,
+        dragmode=False,
+        showlegend=False
+    )

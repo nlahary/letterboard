@@ -13,7 +13,9 @@ import plotly.graph_objects as go
 import numpy as np
 import matplotlib.patches as patches
 
+from page3 import plot_sankey
 from visuals import draw_radar_decades, draw_top3, fav_countries, draw_log_timeline, fav_genres, draw_rating_hist, fav_actors, fav_studios, radar_plot
+# from page2 import
 
 
 def get_total_pages(username: str) -> int:
@@ -209,6 +211,7 @@ def run_app():
                         st.error(
                             f"Timeout error. Please try again or check your internet connection.")
                         return
+
                 with tab_level2:
                     fig = radar_plot(df)
 
@@ -239,6 +242,12 @@ def run_app():
 
                     fig = draw_radar_decades(df)
                     st.pyplot(fig)
+
+                    # arc = draw_network_actors(df)
+                    # st.pyplot(arc)
+
+                    fig = plot_sankey(df)
+                    st.plotly_chart(fig)
         else:
             st.error("Please enter a username.")
 
