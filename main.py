@@ -50,7 +50,9 @@ def parse_content(content: str) -> pd.DataFrame:
 
     films_names = [film.attrs["data-film-name"] for film in films]
     films_ratings = [film.attrs["data-rating"] for film in films]
-    films_years = [int(film.attrs["data-film-year"]) for film in films]
+    films_years = [int(film.attrs["data-film-year"]) if film.attrs["data-film-year"] else pd.NA
+                   for film in films]
+
     films_liked = [film.attrs["data-liked"] for film in films]
     films_log_date = [film.attrs["data-viewing-date"] for film in films]
     films_urls = [
@@ -137,7 +139,7 @@ async def fetch_data(client: httpx.AsyncClient, username: str, page: int, execut
 
     details_df = pd.DataFrame(details_list)
     combined_df = pd.concat([df, details_df], axis=1)
-    return combined_df
+    return combined_df.dropna()
 
 
 async def main(username: str, total_pages: int) -> pd.DataFrame:
@@ -217,7 +219,7 @@ def run_app():
 
                     title = "Your Favorite Studios"
                     subtitle = """
-                    
+
                     The size of the bars represents the average of your ratings for the movies from each studio.
                     The white dots represent the average rating of the movies from each studio.
                     The color gradient   represents the number of movies you have watched from each studio.
@@ -243,8 +245,15 @@ def run_app():
                     fig = draw_radar_decades(df)
                     st.pyplot(fig)
 
-                    # arc = draw_network_actors(df)
-                    # st.pyplot(arc)
+                    title = "Does the country of the movies always make movies of the same language?"
+                    subtitle = """
+                    The Sankey diagram below shows the distribution of the languages of the movies you have watched by country.
+                    """
+
+                    st.markdown(f"""
+                    # {title}
+                    {subtitle}
+                    """)
 
                     fig = plot_sankey(df)
                     st.plotly_chart(fig)

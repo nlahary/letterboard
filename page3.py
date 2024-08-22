@@ -51,7 +51,7 @@ def plot_sankey(df):
                 'rgba(128, 0, 128, 1)',  # purple
                 'rgba(0, 255, 255, 1)',  # cyan
                 'rgba(255, 0, 255, 1)',  # magenta
-                'rgba(255, 255, 0, 1)'   # yellow
+                'rgba(255, 255, 0, 1)'   #
             ]
         )
     }
@@ -96,7 +96,6 @@ def plot_sankey(df):
     )])
 
     fig.update_layout(
-        title_text="Sankey Diagram of Countries to Languages",
         font_size=12,
         width=1200,
         height=800
