@@ -2,29 +2,12 @@ import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 
-# Fonction pour calculer la couleur moyenne des liens partant d'une source
-
 
 def plot_sankey(df):
-    def average_color(colors):
-        rgb_colors = []
-        for c in colors:
-            if c.startswith('rgba'):
-                rgba = c.replace('rgba(', '').replace(')', '').split(',')
-                rgb = tuple(map(int, rgba[:3]))  # Convertir en tuple (R, G, B)
-                rgb_colors.append(rgb)
-
-        if not rgb_colors:
-            return 'grey'
-
-        # Calculer la couleur moyenne
-        avg_color = tuple(np.mean(rgb_colors, axis=0).astype(int))
-        return f'rgba({avg_color[0]}, {avg_color[1]}, {avg_color[2]}, 1)'
-
     df = df[["country", "primary_language"]]
 
-    link_counts = df.groupby(['country', 'primary_language']
-                             ).size().reset_index(name='count')
+    link_counts = df.groupby(
+        ['country', 'primary_language']).size().reset_index(name='count')
 
     countries = link_counts['country'].unique()
     languages = link_counts['primary_language'].unique()
@@ -51,7 +34,7 @@ def plot_sankey(df):
                 'rgba(128, 0, 128, 1)',  # purple
                 'rgba(0, 255, 255, 1)',  # cyan
                 'rgba(255, 0, 255, 1)',  # magenta
-                'rgba(255, 255, 0, 1)'   #
+                'rgba(255, 255, 0, 1)'   # yellow
             ]
         )
     }
@@ -70,13 +53,16 @@ def plot_sankey(df):
             '1)', '0.4)')  # Changer l'opacité à 0.4
         link_colors.append(rgba_color)
 
-    # Calculer les couleurs moyennes pour les pays en fonction des couleurs des cibles (targets) auxquelles ils sont liés
+    # Attribuer la couleur du lien avec le poids le plus grand à la source
     for country in countries:
-        outgoing_targets = [targets[i] for i in range(
+        outgoing_indices = [i for i in range(
             len(sources)) if sources[i] == node_mapping[country]]
-        outgoing_colors = [node_colors[target] for target in outgoing_targets]
-        if outgoing_colors:
-            node_colors[node_mapping[country]] = average_color(outgoing_colors)
+        if outgoing_indices:
+            # Trouver l'indice du lien avec le poids maximum
+            max_index = max(outgoing_indices, key=lambda i: values[i])
+            # Utiliser la couleur de la target du lien avec le poids maximum pour la source
+            node_colors[node_mapping[country]
+                        ] = link_colors[max_index].replace('0.4)', '1)')
 
     # Créer le diagramme de Sankey
     fig = go.Figure(data=[go.Sankey(
@@ -102,3 +88,10 @@ def plot_sankey(df):
     )
 
     return fig
+
+
+if __name__ == "__main__":
+
+    df = pd.read_csv('letterboxd.csv')
+    fig = plot_sankey(df)
+    fig.show()
