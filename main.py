@@ -6,16 +6,9 @@ from time import time
 from concurrent.futures import ThreadPoolExecutor
 import backoff
 import streamlit as st
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-import plotly.graph_objects as go
-import numpy as np
-import matplotlib.patches as patches
 
-from page3 import plot_sankey
-from visuals import draw_radar_decades, draw_top3, fav_countries, draw_log_timeline, fav_genres, draw_rating_hist, fav_actors, fav_studios, radar_plot
-# from page2 import
+from visuals_2 import *
+from visuals import *
 
 
 def get_total_pages(username: str) -> int:
@@ -181,85 +174,128 @@ def run_app():
             with st.spinner("Fetching data..."):
                 try:
                     df = asyncio.run(main(username, total_pages))
-
+                    st.success("Data fetched successfully!")
+                    if df.empty:
+                        st.error(
+                            f"No data found for user '{username}'. Please check the username and try again.")
+                        return
                 except AttributeError as e:
                     if "PoolTimeoutError" in str(e):
                         st.error("The request timed out. Please try again.")
                         return
 
-                tab_level1, tab_level2 = st.tabs(
-                    ["Level.1", "Level.2"])
+                if df.empty:
+                    st.error(
+                        f"No data found for user '{username}'. Please check the username and try again.")
+                    return
+                tab_level1, tab_level2, tab_level3 = st.tabs(
+                    ["Level.1", "Level.2", "Level.3"])
 
                 with tab_level1:
                     try:
                         fig = draw_top3(df)
                         st.pyplot(fig)
 
-                        fig = fav_countries(df)
+                        fig = draw_top_countries(df)
                         st.plotly_chart(fig)
 
                         fig = draw_log_timeline(df)
                         st.plotly_chart(fig)
 
-                        fig = fav_genres(df)
+                        fig = draw_top_genres(df)
                         st.plotly_chart(fig)
 
-                        fig = draw_rating_hist(df)
+                        fig = draw_rating_dist(df)
                         st.plotly_chart(fig)
 
-                        fig = fav_actors(df)
+                        fig = draw_top_actors(df)
                         st.plotly_chart(fig)
+
                     except UnboundLocalError:
                         st.error(
                             f"Timeout error. Please try again or check your internet connection.")
                         return
 
                 with tab_level2:
-                    fig = radar_plot(df)
 
-                    title = "Your Favorite Studios"
-                    subtitle = """
-
-                    The size of the bars represents the average of your ratings for the movies from each studio.
-                    The white dots represent the average rating of the movies from each studio.
-                    The color gradient   represents the number of movies you have watched from each studio.
-
-                    Inspired by the work of [Tobias Stadler](https://tobias-stalder.netlify.app/dataviz/) & [Tomás Capretto](https://tomicapretto.com/)
-                    """
-
+                    fig, title, subtitle = draw_studios_radar(df)
                     st.markdown(f"""
                     # {title}
                     {subtitle}
                     """)
-
                     st.pyplot(fig)
 
-                    title = "Your Favorite Decades"
-                    subtitle = " The radar chart below shows the number of movies you have watched per decade (Top 8).\n"
-
+                    fig, title, subtitle = draw_decades_radar(df)
                     st.markdown(f"""
                     # {title}
                     {subtitle}
                     """)
-
-                    fig = draw_radar_decades(df)
                     st.pyplot(fig)
 
-                    title = "Does the country of the movies always make movies of the same language?"
-                    subtitle = """
-                    The Sankey diagram below shows the distribution of the languages spoken in the movies you have watched 
-                    by the country of origin of the movies. 
-                    The color of the links represents the language spoken in the movie.
-                    The width of the links represents the number of movies using that language.
-                    """
-
+                    fig, title, subtitle = draw_lang_sankey(df)
                     st.markdown(f"""
                     # {title}
                     {subtitle}
                     """)
-
-                    fig = plot_sankey(df)
                     st.plotly_chart(fig)
+
+                with tab_level3:
+
+                    if 'filter_by' not in st.session_state:
+                        st.session_state['filter_by'] = "Country"
+
+                    # Create select boxes without refreshing the page
+                    filter_by = st.selectbox(
+                        "Filter by:", ["Country", "Language",
+                                       "Genre", "Director", "Actor", "Studio"],
+                        index=["Country", "Language", "Genre", "Director", "Actor", "Studio"].index(
+                            st.session_state['filter_by']),
+                        key='filter_by_select'
+                    )
+
+                    apply_filters = st.button("Apply Filters")
+
+                    if apply_filters or st.session_state['filter_by'] != filter_by:
+                        st.session_state['filter_by'] = filter_by
+
+                        # Filtering logic
+                        if filter_by == "Country":
+                            top_10 = df["country"].value_counts().head(10)
+                        elif filter_by == "Language":
+                            top_10 = df["primary_language"].value_counts().head(
+                                10)
+                        elif filter_by == "Genre":
+                            top_10 = df["genres"].explode(
+                            ).value_counts().head(10)
+                        elif filter_by == "Director":
+                            top_10 = df["director"].value_counts().head(10)
+                        elif filter_by == "Actor":
+                            top_10 = df["actors"].explode(
+                            ).value_counts().head(10)
+                        elif filter_by == "Studio":
+                            top_10 = df["studio"].value_counts().head(10)
+
+                        st.write(top_10)
+                    else:
+                        # Default display when the app is first loaded or not interacting with the button
+                        if st.session_state['filter_by'] == "Country":
+                            top_10 = df["country"].value_counts().head(10)
+                        elif st.session_state['filter_by'] == "Language":
+                            top_10 = df["primary_language"].value_counts().head(
+                                10)
+                        elif st.session_state['filter_by'] == "Genre":
+                            top_10 = df["genres"].explode(
+                            ).value_counts().head(10)
+                        elif st.session_state['filter_by'] == "Director":
+                            top_10 = df["director"].value_counts().head(10)
+                        elif st.session_state['filter_by'] == "Actor":
+                            top_10 = df["actors"].explode(
+                            ).value_counts().head(10)
+                        elif st.session_state['filter_by'] == "Studio":
+                            top_10 = df["studio"].value_counts().head(10)
+
+                        st.write(top_10)
+
         else:
             st.error("Please enter a username.")
 
