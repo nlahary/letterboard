@@ -126,8 +126,7 @@ if st.session_state.df is not None and not st.session_state.df.empty:
             selected_column = st.selectbox(
                 "Filter by:",
                 ["Country", "Language", "Genre"],
-                index=0 if st.session_state.selected_column is None else [
-                    "Country", "Language", "Genre"].index(st.session_state.selected_column)
+                index=0  # Random value to avoid bugs
             )
 
             st.session_state.selected_column = selected_column
@@ -136,36 +135,34 @@ if st.session_state.df is not None and not st.session_state.df.empty:
 
         # if st.session_state.selected_column:
         #     st.session_state.filter_by = st.session_state.selected_column
-            if st.session_state.selected_column == "Country":
-                logger.info(f'Country chosen : session state {
-                    st.session_state.selected_column}')
-                # Show top countries and their counts
-                df_country = st.session_state.df["country"].value_counts(
-                ).reset_index()
-                df_country.columns = ["Country", "Count"]
-                st.write(df_country)
+        if st.session_state.selected_column == "Country":
+            logger.info("Country selected")
+            logger.info(f'Country chosen : session state {
+                st.session_state.selected_column}')
+            # Show top countries and their counts
+            df_country = st.session_state.df["country"].value_counts(
+            ).reset_index()
+            df_country.columns = ["Country", "Count"]
+            st.write(df_country)
 
-            elif st.session_state.selected_column == "Language":
-                logger.info(f'Country chosen : session state {
-                    st.session_state.selected_column}')
+        elif st.session_state.selected_column == "Language":
+            logger.info("Language selected")
+            logger.info(f'Country chosen : session state {
+                st.session_state.selected_column}')
 
-                # Show top languages and their counts
-                df_lang = st.session_state.df["primary_language"].value_counts(
-                ).reset_index()
-                df_lang.columns = ["Language", "Count"]
-                st.write(df_lang)
+            # Show top languages and their counts
+            df_lang = st.session_state.df["primary_language"].value_counts(
+            ).reset_index()
+            df_lang.columns = ["Language", "Count"]
+            st.write(df_lang)
 
-            elif st.session_state.selected_column == "Genre":
-                logger.info(f'Country chosen : session state {
-                    st.session_state.selected_column}')
+        elif st.session_state.selected_column == "Genre":
+            logger.info("Genre selected")
+            logger.info(f'Country chosen : session state {
+                st.session_state.selected_column}')
 
-                # Show top genres and their counts
-                df_genre = st.session_state.df["genres"].explode(
-                ).value_counts().reset_index()
-                df_genre.columns = ["Genre", "Count"]
-                st.write(df_genre)
-
-#  Display the state variables for debugging
-st.write(st.session_state.selected_column)
-logger.info(f"end of script with session state: {
-            st.session_state.username}, & {st.session_state.selected_column} \n")
+            # Show top genres and their counts
+            df_genre = st.session_state.df["genres"].explode(
+            ).value_counts().reset_index()
+            df_genre.columns = ["Genre", "Count"]
+            st.write(df_genre)

@@ -399,3 +399,284 @@
 
 2024-08-28 22:21:38,270 - INFO - end of script with session state: Nathanael92, & Language 
 
+2024-08-29 20:06:41,862 - INFO - Script started with session state: None, & Country
+2024-08-29 20:06:41,863 - INFO - **************************************************
+2024-08-29 20:06:41,863 - INFO - Username: 
+2024-08-29 20:06:41,864 - INFO - end of script with session state: None, & Country 
+
+2024-08-29 20:06:44,493 - INFO - Script started with session state: None, & Country
+2024-08-29 20:06:44,493 - INFO - **************************************************
+2024-08-29 20:06:44,494 - INFO - Username: Nathanael92
+2024-08-29 20:06:44,494 - INFO - Username updated: Nathanael92
+2024-08-29 20:06:44,494 - INFO -  Session state username: Nathanael92
+2024-08-29 20:06:44,495 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-29 20:06:44,554 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-29 20:06:44,554 - INFO - **************************************************
+2024-08-29 20:06:44,555 - INFO - Username: Nathanael92
+2024-08-29 20:06:44,555 - INFO - Fetching data for user: Nathanael92
+2024-08-29 20:07:14,203 - INFO - Dataframe:             film rating  date  ...                                             actors running_time average_rating
+0    Cloverfield      6  2008  ...  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  ...  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024  ...  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  ...  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-29 20:07:16,781 - INFO - Selected column: Country
+2024-08-29 20:07:16,782 - INFO - Country chosen : session state Country
+2024-08-29 20:07:16,797 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-29 20:07:26,687 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-29 20:07:26,688 - INFO - **************************************************
+2024-08-29 20:07:26,688 - INFO - Username: Nathanael92
+2024-08-29 20:07:28,211 - INFO - Selected column: Language
+2024-08-29 20:07:28,211 - INFO - Country chosen : session state Language
+2024-08-29 20:07:28,214 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:08:22,703 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:08:22,703 - INFO - **************************************************
+2024-08-29 20:08:22,704 - INFO - Username: Nathanael92
+2024-08-29 20:08:24,080 - INFO - Selected column: Language
+2024-08-29 20:08:24,080 - INFO - Country chosen : session state Language
+2024-08-29 20:08:24,083 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:10:08,424 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:10:08,424 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:10:08,424 - INFO - **************************************************
+2024-08-29 20:10:08,424 - INFO - **************************************************
+2024-08-29 20:10:08,425 - INFO - Username: Nathanael92
+2024-08-29 20:10:08,425 - INFO - Username: Nathanael92
+2024-08-29 20:10:09,781 - INFO - Selected column: Language
+2024-08-29 20:10:09,781 - INFO - Selected column: Language
+2024-08-29 20:10:09,781 - INFO - Language selected
+2024-08-29 20:10:09,781 - INFO - Language selected
+2024-08-29 20:10:09,782 - INFO - Country chosen : session state Language
+2024-08-29 20:10:09,782 - INFO - Country chosen : session state Language
+2024-08-29 20:10:09,784 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:10:09,784 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:10:14,327 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:10:14,327 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:10:14,327 - INFO - **************************************************
+2024-08-29 20:10:14,327 - INFO - **************************************************
+2024-08-29 20:10:14,328 - INFO - Username: Nathanael92
+2024-08-29 20:10:14,328 - INFO - Username: Nathanael92
+2024-08-29 20:10:15,697 - INFO - Selected column: Country
+2024-08-29 20:10:15,697 - INFO - Selected column: Country
+2024-08-29 20:10:15,697 - INFO - Country selected
+2024-08-29 20:10:15,697 - INFO - Country selected
+2024-08-29 20:10:15,697 - INFO - Country chosen : session state Country
+2024-08-29 20:10:15,697 - INFO - Country chosen : session state Country
+2024-08-29 20:10:15,700 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-29 20:10:15,700 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-29 20:10:25,193 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-29 20:10:25,193 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-29 20:10:25,194 - INFO - **************************************************
+2024-08-29 20:10:25,194 - INFO - **************************************************
+2024-08-29 20:10:25,195 - INFO - Username: Nathanael92
+2024-08-29 20:10:25,195 - INFO - Username: Nathanael92
+2024-08-29 20:10:26,534 - INFO - Selected column: Country
+2024-08-29 20:10:26,534 - INFO - Selected column: Country
+2024-08-29 20:10:26,535 - INFO - Country selected
+2024-08-29 20:10:26,535 - INFO - Country selected
+2024-08-29 20:10:26,535 - INFO - Country chosen : session state Country
+2024-08-29 20:10:26,535 - INFO - Country chosen : session state Country
+2024-08-29 20:10:26,538 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-29 20:10:26,538 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-29 20:10:39,259 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-29 20:10:39,259 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-29 20:10:39,259 - INFO - **************************************************
+2024-08-29 20:10:39,259 - INFO - **************************************************
+2024-08-29 20:10:39,260 - INFO - Username: Nathanael92
+2024-08-29 20:10:39,260 - INFO - Username: Nathanael92
+2024-08-29 20:10:40,642 - INFO - Selected column: Language
+2024-08-29 20:10:40,642 - INFO - Selected column: Language
+2024-08-29 20:10:40,642 - INFO - Language selected
+2024-08-29 20:10:40,642 - INFO - Language selected
+2024-08-29 20:10:40,642 - INFO - Country chosen : session state Language
+2024-08-29 20:10:40,642 - INFO - Country chosen : session state Language
+2024-08-29 20:10:40,646 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:10:40,646 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:10:45,448 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:10:45,448 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-29 20:10:45,449 - INFO - **************************************************
+2024-08-29 20:10:45,449 - INFO - **************************************************
+2024-08-29 20:10:45,450 - INFO - Username: Nathanael92
+2024-08-29 20:10:45,450 - INFO - Username: Nathanael92
+2024-08-29 20:10:46,874 - INFO - Selected column: Language
+2024-08-29 20:10:46,874 - INFO - Selected column: Language
+2024-08-29 20:10:46,874 - INFO - Language selected
+2024-08-29 20:10:46,874 - INFO - Language selected
+2024-08-29 20:10:46,874 - INFO - Country chosen : session state Language
+2024-08-29 20:10:46,874 - INFO - Country chosen : session state Language
+2024-08-29 20:10:46,876 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:10:46,876 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-29 20:11:36,087 - INFO - Script started with session state: None, & Country
+2024-08-29 20:11:36,087 - INFO - Script started with session state: None, & Country
+2024-08-29 20:11:36,087 - INFO - Script started with session state: None, & Country
+2024-08-29 20:11:36,088 - INFO - **************************************************
+2024-08-29 20:11:36,088 - INFO - **************************************************
+2024-08-29 20:11:36,088 - INFO - **************************************************
+2024-08-29 20:11:36,089 - INFO - Username: 
+2024-08-29 20:11:36,089 - INFO - Username: 
+2024-08-29 20:11:36,089 - INFO - Username: 
+2024-08-29 20:11:36,090 - INFO - end of script with session state: None, & Country 
+
+2024-08-29 20:11:36,090 - INFO - end of script with session state: None, & Country 
+
+2024-08-29 20:11:36,090 - INFO - end of script with session state: None, & Country 
+
+2024-08-29 20:11:38,677 - INFO - Script started with session state: None, & Country
+2024-08-29 20:11:38,677 - INFO - Script started with session state: None, & Country
+2024-08-29 20:11:38,677 - INFO - Script started with session state: None, & Country
+2024-08-29 20:11:38,677 - INFO - **************************************************
+2024-08-29 20:11:38,677 - INFO - **************************************************
+2024-08-29 20:11:38,677 - INFO - **************************************************
+2024-08-29 20:11:38,677 - INFO - Username: Hynnaisse
+2024-08-29 20:11:38,677 - INFO - Username: Hynnaisse
+2024-08-29 20:11:38,677 - INFO - Username: Hynnaisse
+2024-08-29 20:11:38,677 - INFO - Username updated: Hynnaisse
+2024-08-29 20:11:38,677 - INFO - Username updated: Hynnaisse
+2024-08-29 20:11:38,677 - INFO - Username updated: Hynnaisse
+2024-08-29 20:11:38,677 - INFO -  Session state username: Hynnaisse
+2024-08-29 20:11:38,677 - INFO -  Session state username: Hynnaisse
+2024-08-29 20:11:38,677 - INFO -  Session state username: Hynnaisse
+2024-08-29 20:11:38,679 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-29 20:11:38,679 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-29 20:11:38,679 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-29 20:11:38,795 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-29 20:11:38,795 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-29 20:11:38,795 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-29 20:11:38,796 - INFO - **************************************************
+2024-08-29 20:11:38,796 - INFO - **************************************************
+2024-08-29 20:11:38,796 - INFO - **************************************************
+2024-08-29 20:11:38,796 - INFO - Username: Hynnaisse
+2024-08-29 20:11:38,796 - INFO - Username: Hynnaisse
+2024-08-29 20:11:38,796 - INFO - Username: Hynnaisse
+2024-08-29 20:11:38,797 - INFO - Fetching data for user: Hynnaisse
+2024-08-29 20:11:38,797 - INFO - Fetching data for user: Hynnaisse
+2024-08-29 20:11:38,797 - INFO - Fetching data for user: Hynnaisse
+2024-08-29 20:12:48,399 - INFO - Dataframe:                 film rating  date  ...                                             actors running_time average_rating
+0  Top Gun: Maverick      9  2022  ...  [Tom Cruise, Miles Teller, Monica Barbaro, Lew...          131           3.99
+1       The Prestige     10  2006  ...  [Hugh Jackman, Christian Bale, Michael Caine, ...          130           4.24
+2          Insidious      8  2010  ...  [Patrick Wilson, Rose Byrne, Lin Shaye, Ty Sim...          103           3.22
+3       Emilia Pérez      8  2024  ...  [Karla Sofía Gascón, Zoe Saldaña, Selena Gomez...          132           3.73
+4        Blink Twice      6  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+
+[5 rows x 14 columns]
+2024-08-29 20:12:48,399 - INFO - Dataframe:                 film rating  date  ...                                             actors running_time average_rating
+0  Top Gun: Maverick      9  2022  ...  [Tom Cruise, Miles Teller, Monica Barbaro, Lew...          131           3.99
+1       The Prestige     10  2006  ...  [Hugh Jackman, Christian Bale, Michael Caine, ...          130           4.24
+2          Insidious      8  2010  ...  [Patrick Wilson, Rose Byrne, Lin Shaye, Ty Sim...          103           3.22
+3       Emilia Pérez      8  2024  ...  [Karla Sofía Gascón, Zoe Saldaña, Selena Gomez...          132           3.73
+4        Blink Twice      6  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+
+[5 rows x 14 columns]
+2024-08-29 20:12:48,399 - INFO - Dataframe:                 film rating  date  ...                                             actors running_time average_rating
+0  Top Gun: Maverick      9  2022  ...  [Tom Cruise, Miles Teller, Monica Barbaro, Lew...          131           3.99
+1       The Prestige     10  2006  ...  [Hugh Jackman, Christian Bale, Michael Caine, ...          130           4.24
+2          Insidious      8  2010  ...  [Patrick Wilson, Rose Byrne, Lin Shaye, Ty Sim...          103           3.22
+3       Emilia Pérez      8  2024  ...  [Karla Sofía Gascón, Zoe Saldaña, Selena Gomez...          132           3.73
+4        Blink Twice      6  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+
+[5 rows x 14 columns]
+2024-08-29 20:12:49,964 - INFO - Selected column: Country
+2024-08-29 20:12:49,964 - INFO - Selected column: Country
+2024-08-29 20:12:49,964 - INFO - Selected column: Country
+2024-08-29 20:12:49,964 - INFO - Country selected
+2024-08-29 20:12:49,964 - INFO - Country selected
+2024-08-29 20:12:49,964 - INFO - Country selected
+2024-08-29 20:12:49,965 - INFO - Country chosen : session state Country
+2024-08-29 20:12:49,965 - INFO - Country chosen : session state Country
+2024-08-29 20:12:49,965 - INFO - Country chosen : session state Country
+2024-08-29 20:12:49,969 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-29 20:12:49,969 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-29 20:12:49,969 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-29 20:13:09,745 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-29 20:13:09,745 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-29 20:13:09,745 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-29 20:13:09,746 - INFO - **************************************************
+2024-08-29 20:13:09,746 - INFO - **************************************************
+2024-08-29 20:13:09,746 - INFO - **************************************************
+2024-08-29 20:13:09,747 - INFO - Username: Hynnaisse
+2024-08-29 20:13:09,747 - INFO - Username: Hynnaisse
+2024-08-29 20:13:09,747 - INFO - Username: Hynnaisse
+2024-08-29 20:13:11,251 - INFO - Selected column: Language
+2024-08-29 20:13:11,251 - INFO - Selected column: Language
+2024-08-29 20:13:11,251 - INFO - Selected column: Language
+2024-08-29 20:13:11,251 - INFO - Language selected
+2024-08-29 20:13:11,251 - INFO - Language selected
+2024-08-29 20:13:11,251 - INFO - Language selected
+2024-08-29 20:13:11,252 - INFO - Country chosen : session state Language
+2024-08-29 20:13:11,252 - INFO - Country chosen : session state Language
+2024-08-29 20:13:11,252 - INFO - Country chosen : session state Language
+2024-08-29 20:13:11,254 - INFO - end of script with session state: Hynnaisse, & Language 
+
+2024-08-29 20:13:11,254 - INFO - end of script with session state: Hynnaisse, & Language 
+
+2024-08-29 20:13:11,254 - INFO - end of script with session state: Hynnaisse, & Language 
+
+2024-08-29 20:13:19,138 - INFO - Script started with session state: Hynnaisse, & Language
+2024-08-29 20:13:19,138 - INFO - Script started with session state: Hynnaisse, & Language
+2024-08-29 20:13:19,138 - INFO - Script started with session state: Hynnaisse, & Language
+2024-08-29 20:13:19,138 - INFO - **************************************************
+2024-08-29 20:13:19,138 - INFO - **************************************************
+2024-08-29 20:13:19,138 - INFO - **************************************************
+2024-08-29 20:13:19,139 - INFO - Username: Hynnaisse
+2024-08-29 20:13:19,139 - INFO - Username: Hynnaisse
+2024-08-29 20:13:19,139 - INFO - Username: Hynnaisse
+2024-08-29 20:13:20,584 - INFO - Selected column: Language
+2024-08-29 20:13:20,584 - INFO - Selected column: Language
+2024-08-29 20:13:20,584 - INFO - Selected column: Language
+2024-08-29 20:13:20,584 - INFO - Language selected
+2024-08-29 20:13:20,584 - INFO - Language selected
+2024-08-29 20:13:20,584 - INFO - Language selected
+2024-08-29 20:13:20,585 - INFO - Country chosen : session state Language
+2024-08-29 20:13:20,585 - INFO - Country chosen : session state Language
+2024-08-29 20:13:20,585 - INFO - Country chosen : session state Language
+2024-08-29 20:13:20,587 - INFO - end of script with session state: Hynnaisse, & Language 
+
+2024-08-29 20:13:20,587 - INFO - end of script with session state: Hynnaisse, & Language 
+
+2024-08-29 20:13:20,587 - INFO - end of script with session state: Hynnaisse, & Language 
+
+2024-08-29 20:13:28,648 - INFO - Script started with session state: Hynnaisse, & Language
+2024-08-29 20:13:28,648 - INFO - Script started with session state: Hynnaisse, & Language
+2024-08-29 20:13:28,648 - INFO - Script started with session state: Hynnaisse, & Language
+2024-08-29 20:13:28,649 - INFO - **************************************************
+2024-08-29 20:13:28,649 - INFO - **************************************************
+2024-08-29 20:13:28,649 - INFO - **************************************************
+2024-08-29 20:13:28,650 - INFO - Username: Hynnaisse
+2024-08-29 20:13:28,650 - INFO - Username: Hynnaisse
+2024-08-29 20:13:28,650 - INFO - Username: Hynnaisse
+2024-08-29 20:13:30,044 - INFO - Selected column: Genre
+2024-08-29 20:13:30,044 - INFO - Selected column: Genre
+2024-08-29 20:13:30,044 - INFO - Selected column: Genre
+2024-08-29 20:13:30,044 - INFO - Genre selected
+2024-08-29 20:13:30,044 - INFO - Genre selected
+2024-08-29 20:13:30,044 - INFO - Genre selected
+2024-08-29 20:13:30,044 - INFO - Country chosen : session state Genre
+2024-08-29 20:13:30,044 - INFO - Country chosen : session state Genre
+2024-08-29 20:13:30,044 - INFO - Country chosen : session state Genre
+2024-08-29 20:13:30,047 - INFO - end of script with session state: Hynnaisse, & Genre 
+
+2024-08-29 20:13:30,047 - INFO - end of script with session state: Hynnaisse, & Genre 
+
+2024-08-29 20:13:30,047 - INFO - end of script with session state: Hynnaisse, & Genre 
+
