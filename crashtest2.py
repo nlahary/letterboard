@@ -1,8 +1,10 @@
 import streamlit as st
-from bson import json_util, BSON  # PyMongo's BSON encoding and decoding functions
+from bson import json_util, decode_all, encode
 import json
 
-bson_data = BSON.encode({
+# Exemple de données BSON brutes codées en dur (sous forme de bytes)
+
+bson_data = encode({
     "nom": "ChatGPT",
     "type": "Assistant IA",
     "caractéristiques": {
@@ -14,41 +16,52 @@ bson_data = BSON.encode({
 })
 
 
-def main():
+def main(bson_data=bson_data):
     st.title("Application Streamlit pour lire et modifier des fichiers BSON")
 
     # Lire les données BSON
-    bson_dict = BSON.decode(bson_data)
+    bson_dict = decode_all(bson_data)[0]
 
-    # Afficher le contenu BSON sous forme de texte
-    st.header("Contenu BSON original")
-    bson_pretty = json.dumps(bson_dict, indent=4, ensure_ascii=False)
-    st.code(bson_pretty, language='json')
+    # Utiliser une variable d'état pour suivre le mode (vue ou édition)
+    if "edit_mode" not in st.session_state:
+        st.session_state.edit_mode = False
 
-    # Permettre la modification des données BSON
-    st.header("Modifier le BSON")
-    modified_bson_str = st.text_area(
-        "Éditez le BSON ici :", bson_pretty, height=300)
+    if st.session_state.edit_mode:
+        # Mode édition
+        st.header("Modifier le BSON")
+        bson_pretty = json.dumps(bson_dict, indent=4, ensure_ascii=False)
+        modified_bson_str = st.text_area(
+            "Éditez le BSON ici :", bson_pretty, height=300)
 
-    if st.button("Sauvegarder les modifications"):
-        try:
-            # Convertir la chaîne modifiée en dictionnaire Python
-            modified_bson_dict = json.loads(modified_bson_str)
+        if st.button("Sauvegarder"):
+            try:
+                # Convertir la chaîne modifiée en dictionnaire Python
+                modified_bson_dict = json.loads(modified_bson_str)
 
-            # Convertir en BSON et sauvegarder (simulé ici par une simple variable)
-            modified_bson_data = BSON.encode(modified_bson_dict)
+                # Convertir en BSON et sauvegarder (simulé ici par une simple variable)
+                bson_data = encode(modified_bson_dict)
 
-            # Afficher la confirmation
-            st.success("Modifications sauvegardées avec succès !")
+                # Mise à jour de l'état pour sortir du mode édition
+                st.session_state.edit_mode = False
 
-            # Afficher le contenu BSON modifié
-            st.header("Contenu BSON modifié")
-            st.code(json.dumps(modified_bson_dict, indent=4,
-                    ensure_ascii=False), language='json')
+                # Afficher la confirmation
+                st.success("Modifications sauvegardées avec succès !")
+                st.rerun()
+                # Rafraîchir la page pour afficher les données mises à jour
+            except Exception as e:
+                st.error(f"Erreur lors de la sauvegarde : {e}")
 
-        except Exception as e:
-            st.error(f"Erreur lors de la sauvegarde : {e}")
+    else:
+        # Mode vue
+        st.header("Contenu BSON")
+        bson_pretty = json.dumps(bson_dict, indent=4, ensure_ascii=False)
+        st.code(bson_pretty, language='json')
+
+        if st.button("Modifier"):
+            # Passer en mode édition
+            st.session_state.edit_mode = True
+            st.rerun()
 
 
 if __name__ == "__main__":
-    main()
+    main(bson_data=bson_data)
