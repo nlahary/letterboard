@@ -1,0 +1,401 @@
+2024-08-28 21:43:41,099 - INFO - Script started with session state: None, & Country
+2024-08-28 21:43:41,099 - INFO - **************************************************
+2024-08-28 21:43:41,100 - INFO - Username: 
+2024-08-28 21:43:41,102 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 21:43:41,613 - INFO - Script started with session state: None, & Country
+2024-08-28 21:43:41,613 - INFO - **************************************************
+2024-08-28 21:43:41,614 - INFO - Username: 
+2024-08-28 21:43:41,616 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 21:43:49,103 - INFO - Script started with session state: None, & Country
+2024-08-28 21:43:49,103 - INFO - **************************************************
+2024-08-28 21:43:49,148 - INFO - Username: Nathanael92
+2024-08-28 21:43:49,148 - INFO - Username updated: Nathanael92
+2024-08-28 21:43:49,148 - INFO -  Session state username: Nathanael92
+2024-08-28 21:43:49,150 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 21:43:49,202 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 21:43:49,202 - INFO - **************************************************
+2024-08-28 21:43:49,202 - INFO - Username: Nathanael92
+2024-08-28 21:43:49,202 - INFO - Fetching data for user: Nathanael92
+2024-08-28 21:43:57,558 - INFO - Dataframe:             film rating  date  ...                                             actors running_time average_rating
+0    Cloverfield      6  2008  ...  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  ...  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024  ...  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  ...  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 21:44:00,048 - INFO - Selected column: Country
+2024-08-28 21:44:00,048 - INFO - Country chosen : session state Country
+2024-08-28 21:44:00,054 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 21:47:14,489 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 21:47:14,490 - INFO - **************************************************
+2024-08-28 21:47:14,491 - INFO - Username: Nathanael92
+2024-08-28 21:47:16,217 - INFO - Selected column: Language
+2024-08-28 21:47:16,217 - INFO - Country chosen : session state Language
+2024-08-28 21:47:16,220 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-28 21:54:06,503 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 21:54:06,503 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 21:54:06,503 - INFO - **************************************************
+2024-08-28 21:54:06,503 - INFO - **************************************************
+2024-08-28 21:54:06,504 - INFO - Username: Nathanael92
+2024-08-28 21:54:06,504 - INFO - Username: Nathanael92
+2024-08-28 21:57:36,206 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 21:57:36,206 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 21:57:36,206 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 21:57:36,206 - INFO - **************************************************
+2024-08-28 21:57:36,206 - INFO - **************************************************
+2024-08-28 21:57:36,206 - INFO - **************************************************
+2024-08-28 21:57:36,208 - INFO - Username: Nathanael92
+2024-08-28 21:57:36,208 - INFO - Username: Nathanael92
+2024-08-28 21:57:36,208 - INFO - Username: Nathanael92
+2024-08-28 21:57:36,375 - INFO - End of script with session state: Nathanael92, & Language 
+
+2024-08-28 21:57:36,375 - INFO - End of script with session state: Nathanael92, & Language 
+
+2024-08-28 21:57:36,375 - INFO - End of script with session state: Nathanael92, & Language 
+
+2024-08-28 22:00:45,594 - INFO - Script started with session state: None, & Country
+2024-08-28 22:00:45,595 - INFO - **************************************************
+2024-08-28 22:00:45,596 - INFO - Username: 
+2024-08-28 22:00:45,596 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:00:46,142 - INFO - Script started with session state: None, & Country
+2024-08-28 22:00:46,142 - INFO - **************************************************
+2024-08-28 22:00:46,143 - INFO - Username: 
+2024-08-28 22:00:46,146 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:00:59,763 - INFO - Script started with session state: None, & Country
+2024-08-28 22:00:59,764 - INFO - **************************************************
+2024-08-28 22:00:59,767 - INFO - Username: Nathanael92
+2024-08-28 22:00:59,767 - INFO - Username updated: Nathanael92
+2024-08-28 22:00:59,768 - INFO -  Session state username: Nathanael92
+2024-08-28 22:00:59,770 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:01:00,430 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:01:00,430 - INFO - **************************************************
+2024-08-28 22:01:00,431 - INFO - Username: Nathanael92
+2024-08-28 22:01:00,431 - INFO - Fetching data for user: Nathanael92
+2024-08-28 22:01:06,247 - INFO - Dataframe:             film rating  date  ...                                             actors running_time average_rating
+0    Cloverfield      6  2008  ...  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  ...  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024  ...  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  ...  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 22:01:09,462 - INFO - Selected column: Country
+2024-08-28 22:01:09,463 - INFO - Country chosen : session state Country
+2024-08-28 22:01:09,473 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:01:13,309 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:01:13,309 - INFO - **************************************************
+2024-08-28 22:01:13,310 - INFO - Username: Nathanael92
+2024-08-28 22:01:15,213 - INFO - Selected column: Language
+2024-08-28 22:01:15,213 - INFO - Country chosen : session state Language
+2024-08-28 22:01:15,216 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-28 22:07:55,367 - INFO - Script started with session state: None, & Country
+2024-08-28 22:07:55,367 - INFO - Script started with session state: None, & Country
+2024-08-28 22:07:55,368 - INFO - **************************************************
+2024-08-28 22:07:55,368 - INFO - **************************************************
+2024-08-28 22:07:55,370 - INFO - Username: 
+2024-08-28 22:07:55,370 - INFO - Username: 
+2024-08-28 22:07:55,371 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:07:55,371 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:08:24,057 - INFO - Script started with session state: None, & Country
+2024-08-28 22:08:24,057 - INFO - Script started with session state: None, & Country
+2024-08-28 22:08:24,057 - INFO - Script started with session state: None, & Country
+2024-08-28 22:08:24,057 - INFO - **************************************************
+2024-08-28 22:08:24,057 - INFO - **************************************************
+2024-08-28 22:08:24,057 - INFO - **************************************************
+2024-08-28 22:08:24,058 - INFO - Username: 
+2024-08-28 22:08:24,058 - INFO - Username: 
+2024-08-28 22:08:24,058 - INFO - Username: 
+2024-08-28 22:08:24,060 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:08:24,060 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:08:24,060 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:08:27,256 - INFO - Script started with session state: None, & Country
+2024-08-28 22:08:27,256 - INFO - Script started with session state: None, & Country
+2024-08-28 22:08:27,256 - INFO - Script started with session state: None, & Country
+2024-08-28 22:08:27,258 - INFO - **************************************************
+2024-08-28 22:08:27,258 - INFO - **************************************************
+2024-08-28 22:08:27,258 - INFO - **************************************************
+2024-08-28 22:08:27,262 - INFO - Username: Nathanael92
+2024-08-28 22:08:27,262 - INFO - Username: Nathanael92
+2024-08-28 22:08:27,262 - INFO - Username: Nathanael92
+2024-08-28 22:08:27,264 - INFO - Username updated: Nathanael92
+2024-08-28 22:08:27,264 - INFO - Username updated: Nathanael92
+2024-08-28 22:08:27,264 - INFO - Username updated: Nathanael92
+2024-08-28 22:08:27,268 - INFO -  Session state username: Nathanael92
+2024-08-28 22:08:27,268 - INFO -  Session state username: Nathanael92
+2024-08-28 22:08:27,268 - INFO -  Session state username: Nathanael92
+2024-08-28 22:08:27,275 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:08:27,275 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:08:27,275 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:08:27,375 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:08:27,375 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:08:27,375 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:08:27,375 - INFO - **************************************************
+2024-08-28 22:08:27,375 - INFO - **************************************************
+2024-08-28 22:08:27,375 - INFO - **************************************************
+2024-08-28 22:08:27,376 - INFO - Username: Nathanael92
+2024-08-28 22:08:27,376 - INFO - Username: Nathanael92
+2024-08-28 22:08:27,376 - INFO - Username: Nathanael92
+2024-08-28 22:08:27,377 - INFO - Fetching data for user: Nathanael92
+2024-08-28 22:08:27,377 - INFO - Fetching data for user: Nathanael92
+2024-08-28 22:08:27,377 - INFO - Fetching data for user: Nathanael92
+2024-08-28 22:08:34,947 - INFO - Dataframe:             film rating  date  ...                                             actors running_time average_rating
+0    Cloverfield      6  2008  ...  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  ...  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024  ...  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  ...  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 22:08:34,947 - INFO - Dataframe:             film rating  date  ...                                             actors running_time average_rating
+0    Cloverfield      6  2008  ...  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  ...  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024  ...  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  ...  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 22:08:34,947 - INFO - Dataframe:             film rating  date  ...                                             actors running_time average_rating
+0    Cloverfield      6  2008  ...  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  ...  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024  ...  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  ...  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  ...  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 22:08:37,630 - INFO - Selected column: Country
+2024-08-28 22:08:37,630 - INFO - Selected column: Country
+2024-08-28 22:08:37,630 - INFO - Selected column: Country
+2024-08-28 22:08:37,630 - INFO - Country chosen : session state Country
+2024-08-28 22:08:37,630 - INFO - Country chosen : session state Country
+2024-08-28 22:08:37,630 - INFO - Country chosen : session state Country
+2024-08-28 22:08:37,637 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:08:37,637 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:08:37,637 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:08:42,999 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:08:42,999 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:08:42,999 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:08:42,999 - INFO - **************************************************
+2024-08-28 22:08:42,999 - INFO - **************************************************
+2024-08-28 22:08:42,999 - INFO - **************************************************
+2024-08-28 22:08:43,000 - INFO - Username: Nathanael92
+2024-08-28 22:08:43,000 - INFO - Username: Nathanael92
+2024-08-28 22:08:43,000 - INFO - Username: Nathanael92
+2024-08-28 22:08:44,807 - INFO - Selected column: Genre
+2024-08-28 22:08:44,807 - INFO - Selected column: Genre
+2024-08-28 22:08:44,807 - INFO - Selected column: Genre
+2024-08-28 22:08:44,807 - INFO - Country chosen : session state Genre
+2024-08-28 22:08:44,807 - INFO - Country chosen : session state Genre
+2024-08-28 22:08:44,807 - INFO - Country chosen : session state Genre
+2024-08-28 22:08:44,809 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:08:44,809 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:08:44,809 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:08:58,565 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:08:58,565 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:08:58,565 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:08:58,567 - INFO - **************************************************
+2024-08-28 22:08:58,567 - INFO - **************************************************
+2024-08-28 22:08:58,567 - INFO - **************************************************
+2024-08-28 22:08:58,573 - INFO - Username: Nathanael92
+2024-08-28 22:08:58,573 - INFO - Username: Nathanael92
+2024-08-28 22:08:58,573 - INFO - Username: Nathanael92
+2024-08-28 22:09:00,430 - INFO - Selected column: Genre
+2024-08-28 22:09:00,430 - INFO - Selected column: Genre
+2024-08-28 22:09:00,430 - INFO - Selected column: Genre
+2024-08-28 22:09:00,431 - INFO - Country chosen : session state Genre
+2024-08-28 22:09:00,431 - INFO - Country chosen : session state Genre
+2024-08-28 22:09:00,431 - INFO - Country chosen : session state Genre
+2024-08-28 22:09:00,434 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:09:00,434 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:09:00,434 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:12:26,805 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:12:26,805 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:12:26,805 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:12:26,805 - INFO - Script started with session state: Nathanael92, & Genre
+2024-08-28 22:12:26,806 - INFO - **************************************************
+2024-08-28 22:12:26,806 - INFO - **************************************************
+2024-08-28 22:12:26,806 - INFO - **************************************************
+2024-08-28 22:12:26,806 - INFO - **************************************************
+2024-08-28 22:12:26,807 - INFO - Username: Nathanael92
+2024-08-28 22:12:26,807 - INFO - Username: Nathanael92
+2024-08-28 22:12:26,807 - INFO - Username: Nathanael92
+2024-08-28 22:12:26,807 - INFO - Username: Nathanael92
+2024-08-28 22:12:28,508 - INFO - Selected column: Genre
+2024-08-28 22:12:28,508 - INFO - Selected column: Genre
+2024-08-28 22:12:28,508 - INFO - Selected column: Genre
+2024-08-28 22:12:28,508 - INFO - Selected column: Genre
+2024-08-28 22:12:28,508 - INFO - Country chosen : session state Genre
+2024-08-28 22:12:28,508 - INFO - Country chosen : session state Genre
+2024-08-28 22:12:28,508 - INFO - Country chosen : session state Genre
+2024-08-28 22:12:28,508 - INFO - Country chosen : session state Genre
+2024-08-28 22:12:28,512 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:12:28,512 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:12:28,512 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:12:28,512 - INFO - end of script with session state: Nathanael92, & Genre 
+
+2024-08-28 22:12:31,125 - INFO - Script started with session state: None, & Country
+2024-08-28 22:12:31,125 - INFO - Script started with session state: None, & Country
+2024-08-28 22:12:31,125 - INFO - Script started with session state: None, & Country
+2024-08-28 22:12:31,125 - INFO - Script started with session state: None, & Country
+2024-08-28 22:12:31,126 - INFO - **************************************************
+2024-08-28 22:12:31,126 - INFO - **************************************************
+2024-08-28 22:12:31,126 - INFO - **************************************************
+2024-08-28 22:12:31,126 - INFO - **************************************************
+2024-08-28 22:12:31,127 - INFO - Username: 
+2024-08-28 22:12:31,127 - INFO - Username: 
+2024-08-28 22:12:31,127 - INFO - Username: 
+2024-08-28 22:12:31,127 - INFO - Username: 
+2024-08-28 22:12:31,130 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:12:31,130 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:12:31,130 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:12:31,130 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:18:46,037 - INFO - Script started with session state: None, & Country
+2024-08-28 22:18:46,037 - INFO - **************************************************
+2024-08-28 22:18:46,038 - INFO - Username: 
+2024-08-28 22:19:11,389 - INFO - Script started with session state: None, & Country
+2024-08-28 22:19:11,390 - INFO - **************************************************
+2024-08-28 22:19:11,391 - INFO - Username: Hynnaisse
+2024-08-28 22:19:11,391 - INFO - Username updated: Hynnaisse
+2024-08-28 22:19:11,391 - INFO - Session state username: Hynnaisse
+2024-08-28 22:19:11,770 - INFO - Script started with session state: Hynnaisse, & Country
+2024-08-28 22:19:11,770 - INFO - **************************************************
+2024-08-28 22:19:11,771 - INFO - Username: Hynnaisse
+2024-08-28 22:19:11,772 - INFO - Fetching data for user: Hynnaisse
+2024-08-28 22:19:26,783 - INFO - Dataframe:            film rating  date  liked  ...           director                                             actors running_time average_rating
+0  The Prestige     10  2006   true  ...  Christopher Nolan  [Hugh Jackman, Christian Bale, Michael Caine, ...          130           4.24
+1     Insidious      8  2010   true  ...          James Wan  [Patrick Wilson, Rose Byrne, Lin Shaye, Ty Sim...          103           3.22
+2  Emilia Pérez      8  2024   true  ...    Jacques Audiard  [Karla Sofía Gascón, Zoe Saldaña, Selena Gomez...          132           3.73
+3   Blink Twice      6  2024   true  ...        Zoë Kravitz  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4      The Crow      6  2024  false  ...     Rupert Sanders  [Bill Skarsgård, FKA Twigs, Danny Huston, Laur...          111           2.29
+
+[5 rows x 14 columns]
+2024-08-28 22:19:27,576 - INFO - end of script with session state: Hynnaisse, & Country 
+
+2024-08-28 22:20:08,616 - INFO - Script started with session state: None, & Country
+2024-08-28 22:20:08,616 - INFO - Script started with session state: None, & Country
+2024-08-28 22:20:08,616 - INFO - **************************************************
+2024-08-28 22:20:08,616 - INFO - **************************************************
+2024-08-28 22:20:08,617 - INFO - Username: 
+2024-08-28 22:20:08,617 - INFO - Username: 
+2024-08-28 22:20:08,618 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:20:08,618 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:21:09,698 - INFO - Script started with session state: None, & Country
+2024-08-28 22:21:09,698 - INFO - Script started with session state: None, & Country
+2024-08-28 22:21:09,699 - INFO - **************************************************
+2024-08-28 22:21:09,699 - INFO - **************************************************
+2024-08-28 22:21:09,700 - INFO - Username: 
+2024-08-28 22:21:09,700 - INFO - Username: 
+2024-08-28 22:21:09,701 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:21:09,701 - INFO - end of script with session state: None, & Country 
+
+2024-08-28 22:21:13,949 - INFO - Script started with session state: None, & Country
+2024-08-28 22:21:13,949 - INFO - Script started with session state: None, & Country
+2024-08-28 22:21:13,949 - INFO - **************************************************
+2024-08-28 22:21:13,949 - INFO - **************************************************
+2024-08-28 22:21:13,950 - INFO - Username: Nathanael92
+2024-08-28 22:21:13,950 - INFO - Username: Nathanael92
+2024-08-28 22:21:13,951 - INFO - Username updated: Nathanael92
+2024-08-28 22:21:13,951 - INFO - Username updated: Nathanael92
+2024-08-28 22:21:13,951 - INFO -  Session state username: Nathanael92
+2024-08-28 22:21:13,951 - INFO -  Session state username: Nathanael92
+2024-08-28 22:21:13,953 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:21:13,953 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:21:14,245 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:21:14,245 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:21:14,246 - INFO - **************************************************
+2024-08-28 22:21:14,246 - INFO - **************************************************
+2024-08-28 22:21:14,246 - INFO - Username: Nathanael92
+2024-08-28 22:21:14,246 - INFO - Username: Nathanael92
+2024-08-28 22:21:14,247 - INFO - Fetching data for user: Nathanael92
+2024-08-28 22:21:14,247 - INFO - Fetching data for user: Nathanael92
+2024-08-28 22:21:19,771 - INFO - Dataframe:             film rating  date  liked  ...            director                                             actors running_time average_rating
+0    Cloverfield      6  2008  false  ...         Matt Reeves  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  false  ...     Quentin Dupieux  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024   true  ...  M. Night Shyamalan  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  false  ...         Zoë Kravitz  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  false  ...        Ridley Scott  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 22:21:19,771 - INFO - Dataframe:             film rating  date  liked  ...            director                                             actors running_time average_rating
+0    Cloverfield      6  2008  false  ...         Matt Reeves  [Lizzy Caplan, Jessica Lucas, T.J. Miller, Mic...           85           3.39
+1     Daaaaaalí!      6  2023  false  ...     Quentin Dupieux  [Anaïs Demoustier, Gilles Lellouche, Édouard B...           77           3.49
+2           Trap      6  2024   true  ...  M. Night Shyamalan  [Josh Hartnett, Ariel Donoghue, Saleka, Alison...          105           2.89
+3    Blink Twice      1  2024  false  ...         Zoë Kravitz  [Naomi Ackie, Channing Tatum, Christian Slater...          102           3.45
+4  The Counselor      5  2013  false  ...        Ridley Scott  [Michael Fassbender, Penélope Cruz, Cameron Di...          117           2.68
+
+[5 rows x 14 columns]
+2024-08-28 22:21:21,471 - INFO - Selected column: Country
+2024-08-28 22:21:21,471 - INFO - Selected column: Country
+2024-08-28 22:21:21,471 - INFO - Country chosen : session state Country
+2024-08-28 22:21:21,471 - INFO - Country chosen : session state Country
+2024-08-28 22:21:21,477 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:21:21,477 - INFO - end of script with session state: Nathanael92, & Country 
+
+2024-08-28 22:21:30,873 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:21:30,873 - INFO - Script started with session state: Nathanael92, & Country
+2024-08-28 22:21:30,874 - INFO - **************************************************
+2024-08-28 22:21:30,874 - INFO - **************************************************
+2024-08-28 22:21:30,874 - INFO - Username: Nathanael92
+2024-08-28 22:21:30,874 - INFO - Username: Nathanael92
+2024-08-28 22:21:32,344 - INFO - Selected column: Language
+2024-08-28 22:21:32,344 - INFO - Selected column: Language
+2024-08-28 22:21:32,345 - INFO - Country chosen : session state Language
+2024-08-28 22:21:32,345 - INFO - Country chosen : session state Language
+2024-08-28 22:21:32,348 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-28 22:21:32,348 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-28 22:21:36,864 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 22:21:36,864 - INFO - Script started with session state: Nathanael92, & Language
+2024-08-28 22:21:36,865 - INFO - **************************************************
+2024-08-28 22:21:36,865 - INFO - **************************************************
+2024-08-28 22:21:36,866 - INFO - Username: Nathanael92
+2024-08-28 22:21:36,866 - INFO - Username: Nathanael92
+2024-08-28 22:21:38,269 - INFO - Selected column: Language
+2024-08-28 22:21:38,269 - INFO - Selected column: Language
+2024-08-28 22:21:38,269 - INFO - Country chosen : session state Language
+2024-08-28 22:21:38,269 - INFO - Country chosen : session state Language
+2024-08-28 22:21:38,270 - INFO - end of script with session state: Nathanael92, & Language 
+
+2024-08-28 22:21:38,270 - INFO - end of script with session state: Nathanael92, & Language 
+
