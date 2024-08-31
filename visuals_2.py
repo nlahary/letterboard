@@ -6,8 +6,10 @@ import matplotlib as mpl
 from matplotlib.colors import LinearSegmentedColormap
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 from textwrap import wrap
+import streamlit as st
 
 
+@st.cache_data
 def draw_studios_radar(df) -> plt.Figure:
     """ Draw a radar chart showing the favorite studios of films logged.
         Legend :
@@ -43,7 +45,9 @@ def draw_studios_radar(df) -> plt.Figure:
 
     RATINGS = df_studios['rating'].tolist()
     AVG_RATINGS = df_studios['avg_rating'].tolist()
-    fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(polar=True))
+    fig, ax = plt.subplots(figsize=(10, 10),
+                           subplot_kw=dict(polar=True)
+                           )
 
     fig.patch.set_facecolor('#0E1117')
     ax.patch.set_facecolor('none')
@@ -131,6 +135,7 @@ def draw_studios_radar(df) -> plt.Figure:
     return fig, title, subtitle
 
 
+@st.cache_data
 def draw_decades_radar(df) -> plt.Figure:
     """ Draw a radar chart showing the favorite decades of films logged. (Top 8)"""
 
@@ -178,11 +183,12 @@ def draw_decades_radar(df) -> plt.Figure:
         tick.set_pad(15)
 
     title = "Your Favorite Decades"
-    subtitle = " The radar chart below shows the number of movies you have watched per decade (Top 8).\n"
+    subtitle = " The radar chart below shows the number of movies you have watched per decade (Top 8)."
 
     return fig, title, subtitle
 
 
+@st.cache_data
 def draw_lang_sankey(df) -> go.Figure:
     """ Create a Sankey diagram showing the distribution of languages spoken in the movies 
         the user has watched by the country of origin of the movies. 

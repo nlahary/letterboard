@@ -2,9 +2,16 @@ import pandas as pd
 import streamlit as st
 
 
-@st.cache
-def compute_top10_by_filter(df: pd.DataFrame, filter_by: str, explode: bool = False) -> pd.DataFrame:
-    """Compute top 10 countries, languages, or genres by count."""
-    if explode:
-        df = df[filter_by].explode()
-    return df[filter_by].value_counts().head(10)
+@st.cache_data
+def compute_df_by_filter(df: pd.DataFrame, filter_column: str) -> pd.DataFrame:
+
+    filter = filter_column.lower().replace(" ", "_")
+
+    if filter_column in ["Country", "Language"]:
+        df_filtered = df[filter].value_counts().reset_index()
+        df_filtered.columns = [filter_column, "Count"]
+        return df_filtered
+    else:
+        df_filtered = df[filter].explode().value_counts().reset_index()
+        df_filtered.columns = [filter_column, "Count"]
+        return df_filtered

@@ -2,9 +2,13 @@ import asyncio
 import httpx
 import streamlit as st
 from scrapper import get_total_pages, main
-from visuals_2 import *
 from visuals import *
-from logger import logger
+from visuals_2 import *
+
+from utils import compute_df_by_filter
+import pandas as pd
+
+st.set_page_config(layout="wide")  # Set the page layout to wide mode
 
 st.title("Letterboard : Your Letterboxd Diary Analysis")
 
@@ -19,7 +23,7 @@ st.markdown(
     """
 )
 
-# Initialize session state variables
+# Session state variables
 if 'username' not in st.session_state:
     st.session_state.username = None
 if 'df' not in st.session_state:
@@ -29,23 +33,13 @@ if 'selected_column' not in st.session_state:
 if 'active_tab' not in st.session_state:
     st.session_state.active_tab = "Level.1"
 
-logger.info(f"Script started with session state: {
-            st.session_state.username}, & {st.session_state.selected_column}")
-logger.info("*"*50)
-# Input for the username
 username = st.text_input("Enter your Letterboxd username:",
                          value=st.session_state.username or "").strip()
-logger.info(f"Username: {username}")
 
-# Update session state with the username input
 if username and username != st.session_state.username:
-    logger.info(f"Username updated: {username}")
     st.session_state.username = username
-    logger.info(f" Session state username: {st.session_state.username}")
 
-# """ fetch data"""
 if st.button("Fetch Diary") and st.session_state.username:
-    logger.info(f"Fetching data for user: {st.session_state.username}")
     try:
         total_pages = get_total_pages(st.session_state.username)
     except httpx.HTTPStatusError:
@@ -54,10 +48,9 @@ if st.button("Fetch Diary") and st.session_state.username:
     else:
         with st.spinner("Fetching data..."):
             try:
-                df = asyncio.run(
+                df: pd.DataFrame = asyncio.run(
                     main(st.session_state.username, total_pages))
                 st.session_state.df = df  # Save dataframe to session state
-                logger.info(f"Dataframe: {df.head()}")
                 st.success("Data fetched successfully!")
                 if df.empty:
                     st.error(f"No data found for user '{
@@ -70,99 +63,80 @@ if st.button("Fetch Diary") and st.session_state.username:
             st.error(f"No data found for user '{
                      st.session_state.username}'. Please check the username and try again.")
 
-
-# Create tabs for different levels
-
-
-# """ display data """
+# Display data
 if st.session_state.df is not None and not st.session_state.df.empty:
     tab_level1, tab_level2, tab_level3 = st.tabs(
         ["Level 1", "Level 2", "Level 3"])
 
     with tab_level1:
+        # Two-by-two graph layout using columns
+        col1, col2 = st.columns(2)
 
-        fig = draw_top3(st.session_state.df)
-        st.pyplot(fig)
+        with col1:
+            fig = draw_top3(st.session_state.df)
+            st.pyplot(fig)
 
-        fig = draw_top_countries(st.session_state.df)
-        st.plotly_chart(fig)
+        with col2:
+            fig = draw_top_countries(st.session_state.df)
+            st.plotly_chart(fig)
 
-        fig = draw_log_timeline(st.session_state.df)
-        st.plotly_chart(fig)
+        col3, col4 = st.columns(2)
 
-        fig = draw_top_genres(st.session_state.df)
-        st.plotly_chart(fig)
+        with col3:
+            fig = draw_log_timeline(st.session_state.df)
+            st.plotly_chart(fig)
 
-        fig = draw_rating_dist(st.session_state.df)
-        st.plotly_chart(fig)
+        with col4:
+            fig = draw_top_genres(st.session_state.df)
+            st.plotly_chart(fig)
 
-        fig = draw_top_actors(st.session_state.df)
-        st.plotly_chart(fig)
+        col5, col6 = st.columns(2)
+
+        with col5:
+            fig = draw_rating_dist(st.session_state.df)
+            st.plotly_chart(fig)
+
+        with col6:
+            fig = draw_top_actors(st.session_state.df)
+            st.plotly_chart(fig)
 
     with tab_level2:
-        fig, title, subtitle = draw_studios_radar(st.session_state.df)
-        st.markdown(f"""
-        # {title}
-        {subtitle}
-        """)
-        st.pyplot(fig)
 
-        fig, title, subtitle = draw_decades_radar(st.session_state.df)
-        st.markdown(f"""
-        # {title}
-        {subtitle}
-        """)
-        st.pyplot(fig)
+        col1, col2 = st.columns([0.2, 0.2])
 
-        fig, title, subtitle = draw_lang_sankey(st.session_state.df)
-        st.markdown(f"""
-        # {title}
-        {subtitle}
-        """)
-        st.plotly_chart(fig)
+        with col1:
+            fig, title, subtitle = draw_studios_radar(st.session_state.df)
+            st.markdown(f"""
+            # {title}
+            {subtitle}
+            """)
+            st.pyplot(fig)
+
+        with col2:
+            fig, title, subtitle = draw_decades_radar(st.session_state.df)
+            st.markdown(f"""
+            # {title}
+            {subtitle}
+            """)
+            st.pyplot(fig)
+
+        cont = st.container(border=True)
+        with cont:
+            fig, title, subtitle = draw_lang_sankey(st.session_state.df)
+            st.markdown(f"""
+                    # {title}
+                    {subtitle}
+                    """)
+            st.plotly_chart(fig)
 
     with tab_level3:
-        if st.session_state.df is not None:
-            selected_column = st.selectbox(
-                "Filter by:",
-                ["Country", "Language", "Genre"],
-                index=0  # Random value to avoid bugs
-            )
+        selected_column = st.selectbox(
+            "Filter by:",
+            ["Country", "Primary Language", "Genres"],
+            index=0
+        )
 
-            st.session_state.selected_column = selected_column
-            logger.info(f"Selected column: {
-                st.session_state.selected_column}")
-
-        # if st.session_state.selected_column:
-        #     st.session_state.filter_by = st.session_state.selected_column
-        if st.session_state.selected_column == "Country":
-            logger.info("Country selected")
-            logger.info(f'Country chosen : session state {
-                st.session_state.selected_column}')
-            # Show top countries and their counts
-            df_country = st.session_state.df["country"].value_counts(
-            ).reset_index()
-            df_country.columns = ["Country", "Count"]
-            st.write(df_country)
-
-        elif st.session_state.selected_column == "Language":
-            logger.info("Language selected")
-            logger.info(f'Country chosen : session state {
-                st.session_state.selected_column}')
-
-            # Show top languages and their counts
-            df_lang = st.session_state.df["primary_language"].value_counts(
-            ).reset_index()
-            df_lang.columns = ["Language", "Count"]
-            st.write(df_lang)
-
-        elif st.session_state.selected_column == "Genre":
-            logger.info("Genre selected")
-            logger.info(f'Country chosen : session state {
-                st.session_state.selected_column}')
-
-            # Show top genres and their counts
-            df_genre = st.session_state.df["genres"].explode(
-            ).value_counts().reset_index()
-            df_genre.columns = ["Genre", "Count"]
-            st.write(df_genre)
+        st.session_state.selected_column = selected_column
+        df_filtered = compute_df_by_filter(
+            st.session_state.df, st.session_state.selected_column)
+        st.write(df_filtered)

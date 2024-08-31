@@ -86,7 +86,7 @@ def draw_top_countries(df: pd.DataFrame) -> go.Figure:
         ),
         text=[f'{value}' for value in top_countries.values],
         textposition='outside',
-        width=0.5  # Keep bar width unchanged to avoid altering spacing
+        width=0.8  # Keep bar width unchanged to avoid altering spacing
     ))
 
     fig.update_layout(
