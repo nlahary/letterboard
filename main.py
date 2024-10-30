@@ -65,8 +65,8 @@ if st.button("Fetch Diary") and st.session_state.username:
 
 # Display data
 if st.session_state.df is not None and not st.session_state.df.empty:
-    tab_level1, tab_level2, tab_level3 = st.tabs(
-        ["Level 1", "Level 2", "Level 3"])
+    tab_level1, tab_level2 = st.tabs(
+        ["Page 1", "Page 2"])
 
     with tab_level1:
         # Two-by-two graph layout using columns
@@ -128,13 +128,6 @@ if st.session_state.df is not None and not st.session_state.df.empty:
                     {subtitle}
                     """)
             st.plotly_chart(fig)
-
-    with tab_level3:
-        selected_column = st.selectbox(
-            "Filter by:",
-            ["Country", "Primary Language", "Genres"],
-            index=0
-        )
 
         st.session_state.selected_column = selected_column
         df_filtered = compute_df_by_filter(
